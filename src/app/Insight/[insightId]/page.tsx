@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { PiShareNetworkBold, PiArrowElbowDownLeftBold } from "react-icons/pi";
 
@@ -37,6 +39,7 @@ export default function InsightDetail() {
           className={
             "flex flex-row items-center gap-[0.625rem] px-6 py-4 bg-black text-white font-pretendard text-button_2"
           }
+          handleClicked={() => {}}
         >
           공유하기
           <PiShareNetworkBold size={24} />
@@ -46,6 +49,7 @@ export default function InsightDetail() {
           className={
             "flex flex-row items-center gap-[0.625rem] px-6 py-4 bg-black text-white font-pretendard text-button_2"
           }
+          handleClicked={() => {}}
         >
           돌아가기
           <PiArrowElbowDownLeftBold size={24} />
