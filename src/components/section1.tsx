@@ -20,7 +20,11 @@ export default function Section1() {
           선순위 금융을 법인 및 개인 투자자들께서도 투자할 수 있도록 안정적인
           방향성을 제안합니다.
         </h3>
-        <Button varient="contain" className="section1-button">
+        <Button
+          varient="contain"
+          className="section1-button"
+          handleClicked={() => {}}
+        >
           문의하기
         </Button>
       </div>

@@ -59,7 +59,11 @@ export default function Section3() {
         <br />
         O개 전문투자기관과 함께 합니다.
       </span>
-      <Button className="section3-button" varient="contain">
+      <Button
+        className="section3-button"
+        varient="contain"
+        handleClicked={() => {}}
+      >
         자세히
       </Button>
       <div className="section3-partner-logo">

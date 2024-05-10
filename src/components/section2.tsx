@@ -26,7 +26,11 @@ export default function Section2() {
           서울, 수도권 내 대규모 부동산 자산을 선순위 담보로 한<br />
           대출채권에 대해 차별화된 투자자문서비스를 제공드립니다
         </span>
-        <Button className="section-main-button" varient="contain">
+        <Button
+          className="section-main-button"
+          varient="contain"
+          handleClicked={() => {}}
+        >
           자세히
         </Button>
       </div>
