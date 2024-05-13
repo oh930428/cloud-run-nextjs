@@ -135,7 +135,11 @@ export default function Newsletter() {
             ></textarea>
           </div>
         </form>
-        <Button className="" varient="contain" handleClicked={() => {}}>
+        <Button
+          className="newsletter-form-button"
+          varient="contain"
+          handleClicked={() => {}}
+        >
           뉴스레터 구독하기
         </Button>
       </div>
