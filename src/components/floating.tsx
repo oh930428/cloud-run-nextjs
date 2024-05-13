@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "./button";
 import { IoPaperPlane } from "react-icons/io5";
 
