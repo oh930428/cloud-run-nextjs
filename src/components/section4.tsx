@@ -30,7 +30,7 @@ export default function Section4() {
   return (
     <div className="section4-container">
       {performances.map(({ value, unit, description }, index) => (
-        <div key={index} className="section4-performance">
+        <div key={index} className="section4">
           <span className="section4-unit">
             <span className="section4-value">{value} </span>
             {unit}

@@ -4,36 +4,35 @@ import Image from "next/image";
 import { PiShareNetworkBold, PiArrowElbowDownLeftBold } from "react-icons/pi";
 
 import Button from "@/components/button";
+import HeaderTitle from "@/components/header-title";
+import Border from "@/components/border";
 
 export default function InsightDetail() {
   return (
-    <section className="w-full flex flex-col items-center justify-end bg-white text-center px-[112px] py-[8.5rem]">
-      <div className="w-full bg-black py-5 mb-[3.125rem]">
-        <h3 className="text-heading_5 text-white tracking-[0.6rem] font-sabonbold">
-          MARKET INSIGHT
-        </h3>
+    <section className="insight-detail-container">
+      <HeaderTitle
+        tabName={"MARKET INSIGHT"}
+        title={"개발호재 지역 분석(용인 1부)"}
+        publicDate={"24.05.03"}
+        viewsCount={89}
+        className="bg-secondary"
+      />
+      <Border className="w-full border-t-[5px] border-secondary my-4" />
+      <div className="insight-detail-img-section">
+        <Image
+          src={"/images/insight_detail.jpg"}
+          alt={"개발호재 지역 분석(용인 1부"}
+          fill
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center"
+          }}
+        />
       </div>
-      <div className="w-full mb-[0.875rem]">
-        <h1 className="text-heading_1_B text-black tracking-[0.6rem] font-sabonbold mb-[1.875rem]">
-          YOUDONGSAN
-        </h1>
-        <h5 className="text-heading_7 text-primary_800 tracking-[0.1rem] font-sabonbold mb-[3.125rem]">
-          EDITORIAL. YOUDONGSAN
-        </h5>
-        <div className="border-[5px] border-secondary"></div>
-      </div>
-      <div className="w-full flex flex-row items-center border-y-[3px] border-secondary font-pretendard mb-[2rem]">
-        <div className="w-[20%] text-text2">24.05.03</div>
-        <div className="w-[60%] border-x-[3px] border-secondary text-[40px] py-8">
-          개발호재 지역 분석(용인 1부)
-        </div>
-        <div className="w-[20%] text-text2">조회수 89</div>
-      </div>
-      <div className="relative w-[1216px] h-[3325px]">
-        <Image src={"/images/insight_detail.jpg"} alt={""} fill />
-      </div>
-      <div className="w-full border-[5px] border-secondary my-[3.75rem]"></div>
-      <div className="w-full flex flex-row items-center justify-end gap-5">
+      <Border className="w-full border-t-[5px] border-secondary my-4" />
+      <div className="insight-detail-button-section">
         <Button
           varient={"contain"}
           className={

@@ -16,32 +16,40 @@ export default function Navbar() {
         <Image
           src={`https://storage.googleapis.com/yds-btq-img-datum/main-info/${logo}`}
           fill
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            objectPosition: "center"
+          }}
           quality={100}
           alt="youdongsan_logo"
         />
       </Link>
-      <div
-        className={`navbar-tab-section ${textColor} lg:text-heading_8 xl:text-heading_7 2xl:text-heading_7`}
-      >
-        <Link href={""}>WHAT</Link>
-        <Link href={""}>WHO</Link>
-        <Link href={""}>ASSET</Link>
-        <Link href={"/Insight"}>INSIGHT</Link>
-        <Link href={"/Newsletter"}>NEWSLETTER</Link>
-        <Button
-          className="navbar-tab-button"
-          varient="contain"
-          handleClicked={() => {}}
-        >
-          LOGIN
-        </Button>
-        <Button
-          className="navbar-tab-button"
-          varient="contain"
-          handleClicked={() => {}}
-        >
-          SIGN UP
-        </Button>
+      <div className="navbar-tab-container">
+        <div className={`navbar-tab-section ${textColor}`}>
+          <Link href={""}>WHAT</Link>
+          <Link href={""}>WHO</Link>
+          <Link href={""}>ASSET</Link>
+          <Link href={"/Insight"}>INSIGHT</Link>
+          <Link href={"/Newsletter"}>NEWSLETTER</Link>
+        </div>
+        <div className="navbar-button-section">
+          <Button
+            className="navbar-button"
+            varient="contain"
+            handleClicked={() => {}}
+          >
+            LOGIN
+          </Button>
+          <Button
+            className="navbar-button"
+            varient="contain"
+            handleClicked={() => {}}
+          >
+            SIGN UP
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -47,15 +47,15 @@ export default function Section3() {
 
   return (
     <div className="section3-container">
-      <span className="section3-title">Performance</span>
-      <h2 className="section3-subtitle">
+      <h5 className="section3-title">Performance</h5>
+      <span className="section3-subtitle">
         <span className="section3-subtitle-highlight">
           대한민국 금융을 선도하는
         </span>
         은행, 증권사 및 보험사와
         <br />
         함께 선순위 금융시장을 혁신합니다.
-      </h2>
+      </span>
       <span className="section3-description">
         2024년 현재, O개 은행, O개 증권사, O개 저축은행,
         <br />
@@ -69,7 +69,13 @@ export default function Section3() {
         자세히
       </Button>
       <div className="section3-partner-logo">
-        <Image src="/images/partner.jpg" alt="" fill quality={100} />
+        <Image
+          src="/images/partner.jpg"
+          alt={"partner"}
+          fill
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          quality={100}
+        />
       </div>
 
       <div className="section3-completed-assets-container">
@@ -87,7 +93,13 @@ export default function Section3() {
                 className="section3-completed-assets-hover-icon"
               />
             </div>
-            <Image src={url} alt="" fill quality={100} />
+            <Image
+              src={url}
+              alt=""
+              fill
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              quality={100}
+            />
           </div>
         ))}
       </div>

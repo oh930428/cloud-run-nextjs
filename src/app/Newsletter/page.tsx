@@ -7,127 +7,138 @@ import { PiCheckFatFill } from "react-icons/pi";
 
 import Button from "@/components/button";
 import Border from "@/components/border";
-import NewsletterTitle from "@/components/newsletter-title";
+import HeaderTitle from "@/components/header-title";
 
 export default function Newsletter() {
   const [clicked, setClicked] = useState(false);
 
   return (
-    <div className="w-full flex flex-col items-center bg-white py-[8rem] px-[7rem] text-center">
-      <NewsletterTitle />
-      <Border className="w-full border-t-[5px] border-secondary" />
-      <div className="my-[3.125rem]">
-        {clicked ? (
-          <Image
-            src={"/images/newsletter.jpg"}
-            alt={""}
-            width={1216}
-            height={4460}
-          />
-        ) : (
-          <Image
-            src={"/images/newsletter_summary.jpg"}
-            alt={""}
-            width={1216}
-            height={4460}
-          />
+    <>
+      <div className="newsletter-container">
+        <HeaderTitle
+          tabName={"NEWSLETTER"}
+          title={"선순위 금융이란?"}
+          publicDate={"24.05.03"}
+          viewsCount={89}
+          className={"bg-primary_800"}
+        />
+        <Border className="w-full border-t-[5px] border-secondary my-4" />
+        <div className="newsletter-img-section">
+          {clicked ? (
+            <Image
+              src={"/images/newsletter.jpg"}
+              alt={"개발호재 지역 분석(용인 1부"}
+              width={1248}
+              height={4000}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+                objectPosition: "center"
+              }}
+            />
+          ) : (
+            <>
+              <Image
+                src={"/images/newsletter_summary.jpg"}
+                alt={"개발호재 지역 분석(용인 1부"}
+                width={1248}
+                height={5000}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  objectPosition: "center"
+                }}
+              />
+              <Border className="w-full border-t-[5px] border-secondary my-4" />
+            </>
+          )}
+        </div>
+
+        {!clicked && (
+          <Button
+            varient={"outline"}
+            className={"px-[8.125rem] py-5 mt-[6.25rem] text-button_1"}
+            handleClicked={() => setClicked(true)}
+          >
+            MORE VIEW
+          </Button>
         )}
       </div>
-      <Border
-        className={`w-full border-t-[5px] ${clicked && "my-[6.25rem]"}  border-secondary`}
-      />
-      {!clicked && (
-        <Button
-          varient={"outline"}
-          className={"px-[8.125rem] py-5 my-[6.25rem] text-button_1"}
-          handleClicked={() => setClicked(true)}
-        >
-          MORE VIEW
-        </Button>
-      )}
-      <div className="w-full bg-primary_800 p-[7rem]">
-        <div className="font-sabonbold mb-[6.25rem]">
-          <h1 className="text-heading_1_R text-white">
-            <span className="text-primary_100">SUBSCRIBE</span>
-            <br />
-            NEWSLETTER
-          </h1>
-        </div>
-        <form className="w-ufll flex flex-col items-center justify-center">
-          <div className="w-full flex flex-row items-center justify-between gap-16 mb-[9.375rem]">
-            <div className="w-1/2 flex flex-col gap-5">
-              <div className="flex flex-col items-start text-white text-text2 gap-5">
-                <label htmlFor="name">성함 *</label>
-                <input
-                  className="w-full p-[1.875rem] text-secondary_400 text-text2 rounded-md"
-                  id="name"
-                  type="text"
-                  placeholder="성함"
-                />
-              </div>
-              <div className="flex flex-col items-start text-white text-text2 gap-5">
-                <label htmlFor="email">이메일 *</label>
-                <input
-                  className="w-full p-[1.875rem] text-secondary_400 text-text2 rounded-md"
-                  id="email"
-                  type="email"
-                  placeholder="이메일"
-                />
-              </div>
-              <div className="flex flex-col items-start text-white text-text2 gap-5">
-                <label htmlFor="phone">휴대폰 번호 *</label>
-                <input
-                  className="w-full p-[1.875rem] text-secondary_400 text-text2 rounded-md"
-                  id="phone"
-                  type="text"
-                  placeholder="휴대폰 번호(ex 010-1234-5678)"
-                />
-              </div>
-              <div className="flex flex-col items-start text-white text-text2 gap-5">
-                <label htmlFor="company">회사 *</label>
-                <input
-                  className="w-full p-[1.875rem] text-secondary_400 text-text2 rounded-md"
-                  id="company"
-                  type="text"
-                  placeholder="회사"
-                />
-              </div>
+      <div className="newsletter-form-container">
+        <h1 className="newsletter-form-title">
+          <span className="newsletter-form-title-highlight">SUBSCRIBE</span>
+          <br />
+          NEWSLETTER
+        </h1>
+
+        <form className="newsletter-form-section">
+          <div className="newsletter-form-left-section">
+            <div className="newsletter-form-input-section">
+              <label htmlFor="name">성함 *</label>
+              <input
+                className="newsletter-form-input"
+                id="name"
+                type="text"
+                placeholder="성함"
+              />
             </div>
-            <div className="w-1/2 flex flex-col gap-5">
-              <div className="flex flex-row items-center gap-5 relative">
-                <input
-                  type="checkbox"
-                  name=""
-                  id="privacy"
-                  className="peer w-[1.875rem] h-[1.875rem] bg-secondary_400 rounded-xl appearance-none"
-                />
-                <PiCheckFatFill
-                  className="absolute -top-1 left-2 hidden peer-checked:block text-white"
-                  size={30}
-                />
-                <label htmlFor="privacy" className="text-white text-text2">
-                  개인정보 이용 동의 *
-                </label>
-              </div>
-              <textarea
-                name=""
-                id=""
-                cols={26}
-                rows={12}
-                className="w-full h-full pl-6 py-4 rounded-md text-[30px] tracking-wide font-medium leading-[150%] overflow-auto resize-none"
-              ></textarea>
+            <div className="newsletter-form-input-section">
+              <label htmlFor="email">이메일 *</label>
+              <input
+                className="newsletter-form-input"
+                id="email"
+                type="email"
+                placeholder="이메일"
+              />
+            </div>
+            <div className="newsletter-form-input-section">
+              <label htmlFor="phone">휴대폰 번호 *</label>
+              <input
+                className="newsletter-form-input"
+                id="phone"
+                type="text"
+                placeholder="휴대폰 번호(ex 010-1234-5678)"
+              />
+            </div>
+            <div className="newsletter-form-input-section">
+              <label htmlFor="company">회사 *</label>
+              <input
+                className="newsletter-form-input"
+                id="company"
+                type="text"
+                placeholder="회사"
+              />
             </div>
           </div>
-
-          <Button
-            className="w-[40%] text-button_1 px-[6.8125rem] py-5 text-white"
-            varient="contain"
-            handleClicked={() => {}}
-          >
-            뉴스레터 구독하기
-          </Button>
+          <div className="newsletter-form-right-section">
+            <div className="newsletter-form-checkbox-section">
+              <input
+                id="privacy"
+                name=""
+                type="checkbox"
+                className="peer newsletter-form-checkbox"
+              />
+              <PiCheckFatFill
+                className="newsletter-form-check-icon"
+                size={30}
+              />
+              <label htmlFor="privacy">개인정보 이용 동의 *</label>
+            </div>
+            <textarea
+              id=""
+              name=""
+              cols={26}
+              rows={13}
+              className="newsletter-form-textarea"
+            ></textarea>
+          </div>
         </form>
+        <Button className="" varient="contain" handleClicked={() => {}}>
+          뉴스레터 구독하기
+        </Button>
       </div>
-    </div>
+    </>
   );
 }

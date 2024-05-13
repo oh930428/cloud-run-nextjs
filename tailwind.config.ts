@@ -13,203 +13,152 @@ const config = {
     container: {
       center: true,
       screens: {
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px",
-        "2xl": "1536px"
+        // laptop / desktop / extra
+        lg: { min: "1024px", max: "1279px" },
+        xl: { min: "1280px", max: "1439px" },
+        "2xl": { min: "1440px" }
       }
     },
     extend: {
       fontFamily: {
-        sabonbold: ["SabonBold"],
-        pretendard: ["Pretendard"]
+        sabon: ["Sabon"],
+        "sabon-bold": ["Sabon-Bold"],
+        pretendard: ["Pretendard"],
+        "pretendard-thin": ["Pretendard-Thin"],
+        "pretendard-light": ["Pretendard-Light"],
+        "pretendard-regular": ["Pretendard-Regular"],
+        "pretendard-medium": ["Pretendard-Medium"],
+        "pretendard-semibold": ["Pretendard-SemiBold"],
+        "pretendard-bold": ["Pretendard-Bold"],
+        "pretendard-extrabold": ["Pretendard-ExtraBold"]
       },
       fontSize: {
-        heading_1_B: [
+        heading_1_M: [
           "80px",
           {
             lineHeight: "90px",
-            letterSpacing: "-0.5%",
-            fontWeight: 700
+            letterSpacing: "-0.08px"
           }
         ],
-        heading_1_R: [
+        heading_1_S: [
           "72px",
           {
             lineHeight: "90px",
-            letterSpacing: "-0.5%",
-            fontWeight: 400
-          }
-        ],
-        heading_2_L: [
-          "70px",
-          {
-            lineHeight: "70px",
-            letterSpacing: "0%",
-            fontWeight: 700
+            letterSpacing: "-0.08px"
           }
         ],
         heading_2_M: [
-          "62px",
+          "70px",
           {
             lineHeight: "70px",
-            letterSpacing: "0%",
-            fontWeight: 400
+            letterSpacing: "0px"
           }
         ],
         heading_2_S: [
           "40px",
           {
             lineHeight: "70px",
-            letterSpacing: "0%",
-            fontWeight: 700
+            letterSpacing: "0px"
           }
         ],
-        heading_3_B: [
-          "60px",
+        heading_3: [
+          "70px",
           {
             lineHeight: "70px",
-            letterSpacing: "0.2%",
-            fontWeight: 700
-          }
-        ],
-        heading_3_R: [
-          "52px",
-          {
-            lineHeight: "70px",
-            letterSpacing: "0.2%",
-            fontWeight: 400
+            letterSpacing: "0.03px"
           }
         ],
         heading_4: [
           "42px",
           {
-            lineHeight: "50px",
-            letterSpacing: "0.5%",
-            fontWeight: 800
+            lineHeight: "125%",
+            letterSpacing: "0.08px"
           }
         ],
         heading_5: [
           "32px",
           {
             lineHeight: "40px",
-            letterSpacing: "0%",
-            fontWeight: 700
+            letterSpacing: "0px"
           }
         ],
         heading_6: [
           "30px",
           {
             lineHeight: "40px",
-            letterSpacing: "0%",
-            fontWeight: 700
+            letterSpacing: "0px"
           }
         ],
         heading_7: [
           "20px",
           {
             lineHeight: "20px",
-            letterSpacing: "0%",
-            fontWeight: 700
-          }
-        ],
-        heading_8: [
-          "16px",
-          {
-            lineHeight: "16px",
-            letterSpacing: "0%",
-            fontWeight: 700
+            letterSpacing: "0px"
           }
         ],
         text1: [
           "24px",
           {
             lineHeight: "30px",
-            letterSpacing: "0.2%",
-            fontWeight: 600
+            letterSpacing: "0.03px"
           }
         ],
         text2: [
           "24px",
           {
             lineHeight: "30px",
-            letterSpacing: "0.2%",
-            fontWeight: 500
+            letterSpacing: "0.03px"
           }
         ],
         text3: [
           "20px",
           {
             lineHeight: "25px",
-            letterSpacing: "0%",
-            fontWeight: 500
+            letterSpacing: "0px"
           }
         ],
         text4: [
           "20px",
           {
             lineHeight: "25px",
-            letterSpacing: "0%",
-            fontWeight: 400
+            letterSpacing: "0px"
           }
         ],
         text5: [
           "15px",
           {
             lineHeight: "18px",
-            letterSpacing: "-6%",
-            fontWeight: 400
+            letterSpacing: "-0.96px"
           }
         ],
         text6: [
           "10px",
           {
             lineHeight: "10px",
-            letterSpacing: "0%",
-            fontWeight: 400
+            letterSpacing: "0px"
           }
         ],
         button_1: [
           "30px",
           {
             lineHeight: "35px",
-            letterSpacing: "0%",
-            fontWeight: 600
+            letterSpacing: "0px"
           }
         ],
         button_2: [
           "20px",
           {
             lineHeight: "15px",
-            letterSpacing: "0%",
-            fontWeight: 700
+            letterSpacing: "0px"
           }
         ],
         button_3: [
           "16px",
           {
             lineHeight: "19px",
-            letterSpacing: "0%",
-            fontWeight: 700
+            letterSpacing: "0px"
           }
         ],
-        button_4: [
-          "14px",
-          {
-            lineHeight: "17px",
-            letterSpacing: "0%",
-            fontWeight: 700
-          }
-        ],
-        button_5: [
-          "12px",
-          {
-            lineHeight: "15px",
-            letterSpacing: "0%",
-            fontWeight: 700
-          }
-        ]
       },
       colors: {
         primary: "#CBBD9A",
