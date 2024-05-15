@@ -11,6 +11,18 @@
   src: url("/fonts/SabonBold.ttf") format("truetype");
 }
 @font-face {
+  font-family: "Sabon-Italic";
+  src: url("/fonts/SabonItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto-Serif-Light";
+  src: url("/fonts/NotoSerifKR-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Noto-Serif-Medium";
+  src: url("/fonts/NotoSerifKR-Medium.otf") format("opentype");
+}
+@font-face {
   font-family: "Pretendard-Thin";
   src: url("/fonts/Pretendard-Thin.ttf") format("truetype");
 }
@@ -198,19 +210,19 @@
     @apply 2xl:w-[78rem] 2xl:h-[6rem] relative mb-[4rem];
   }
   .section3-completed-assets-container {
-    @apply max-w-full flex flex-row items-center justify-center gap-4 overflow-hidden;
+    @apply max-w-full flex flex-row items-center justify-center gap-2 overflow-hidden;
   }
   .section3-completed-assets {
-    @apply 2xl:w-[15rem] 2xl:h-[26rem] relative transform -skew-x-6;
+    @apply 2xl:w-[17rem] 2xl:h-[36rem] flex flex-col items-center justify-center relative transform -skew-x-6;
   }
   .section3-completed-assets-hover-box {
-    @apply w-full h-full flex flex-col items-center justify-center absolute transition duration-300 ease-in-out opacity-0 hover:opacity-90 z-10 bg-black;
+    @apply w-full h-full flex flex-col items-center justify-center absolute transition duration-300 ease-in-out opacity-0 hover:opacity-80 z-10 bg-black;
   }
   .section3-completed-assets-hover-title {
-    @apply font-pretendard-bold 2xl:text-heading_6 mb-4 underline text-white;
+    @apply font-pretendard-bold 2xl:text-button_1 2xl:mb-10 mb-4 underline underline-offset-4 text-white;
   }
   .section3-completed-assets-hover-amount {
-    @apply font-pretendard-semibold 2xl:text-text1 lg:mb-6 xl:mb-8 2xl:mb-10 text-white;
+    @apply font-pretendard-medium 2xl:text-text2 2xl:mb-10 text-white;
   }
   .section3-completed-assets-hover-icon {
     @apply text-primary;
@@ -220,10 +232,10 @@
 /* Home-Section4 */
 @layer components {
   .section4-container {
-    @apply bg-[url('/images/bg_section4.jpg')] w-full h-[25rem] bg-no-repeat bg-cover bg-center grid grid-cols-3 place-items-center gap-4;
+    @apply bg-[url('/images/bg_section4.jpg')] w-full h-[33rem] bg-no-repeat bg-cover bg-center grid grid-cols-3 place-items-center gap-12 py-[6.875rem];
   }
   .section4 {
-    @apply flex flex-col items-center text-white text-center;
+    @apply flex flex-col items-center text-white text-center gap-6;
   }
   .section4-unit {
     @apply font-pretendard-bold 2xl:text-heading_2_S text-primary_200;
@@ -265,9 +277,6 @@
   .section5-form-left-section {
     @apply w-1/2 flex flex-col justify-between gap-6;
   }
-  .section5-filebox {
-    @apply absolute;
-  }
   .section5-form-input {
     @apply font-pretendard-regular text-text4 bg-secondary_200 text-secondary_600 p-6;
   }
@@ -278,13 +287,69 @@
     @apply flex flex-row items-center justify-between bg-secondary_200 p-4;
   }
   .section5-form-file-input {
-    @apply w-full h-full font-pretendard-regular text-text4 bg-secondary_200 text-secondary_600;
+    @apply w-full h-full font-pretendard-regular text-text4 bg-secondary_200 text-secondary_600 placeholder:text-secondary_200;
   }
   .section5-form-file-button {
     @apply w-1/3 font-pretendard-regular text-text4 text-center bg-secondary_600 text-white p-2 cursor-pointer;
   }
   .section5-form-button {
     @apply w-[20rem] font-pretendard-semibold bg-primary text-white text-button_1 py-4;
+  }
+}
+
+/* who */
+@layer components {
+  .who-container {
+    @apply flex flex-col bg-white pt-[8rem];
+  }
+  .who-header {
+    @apply w-full h-full flex flex-row items-end justify-between px-[7rem] mb-[3.125rem];
+  }
+  .who-header-title {
+    @apply font-sabon text-heading_3;
+  }
+  .who-description {
+    @apply w-full h-[21.75rem] flex flex-col items-center justify-center px-[7rem] bg-[url("/images/bg-who.jpg")] bg-cover text-center;
+  }
+  .who-description-title {
+    @apply font-sabon-bold text-heading_5 text-primary underline underline-offset-4 mb-[2.125rem];
+  }
+  .who-description-subtitle {
+    @apply font-pretendard-medium text-text2 text-primary_50;
+  }
+  .who-determination {
+    @apply w-full flex flex-row items-center justify-center px-[7rem] py-[3.75rem] bg-secondary_bg text-center;
+  }
+  .who-determination-title {
+    @apply font-pretendard-medium text-text2 text-primary_800;
+  }
+  .who-roadmap {
+    @apply flex flex-row items-center justify-center px-[7rem] py-[7.5rem];
+  }
+  .who-vision {
+    @apply flex flex-col items-center justify-center px-[7rem] py-[4.375rem] bg-primary_800 text-primary_bg gap-11 text-center;
+  }
+  .who-vision-title {
+    @apply font-sabon-bold text-heading_5;
+  }
+  .who-vision-en {
+    @apply font-sabon-italic text-[1.875rem] leading-8;
+  }
+  .who-vision-kr {
+    @apply font-pretendard-medium text-[1.875rem] leading-[1.5rem] tracking-[-0.005rem];
+  }
+}
+
+/* Asset */
+@layer components {
+  .asset-container {
+    @apply flex flex-col pt-[8rem] bg-white;
+  }
+  .asset-header {
+    @apply w-full h-full flex flex-row items-end justify-between px-[7rem] mb-[3.125rem];
+  }
+  .asset-header-title {
+    @apply font-sabon text-heading_3;
   }
 }
 
@@ -309,13 +374,13 @@
     @apply w-full flex flex-row items-center border-y-[3px] border-secondary;
   }
   .header-date {
-    @apply w-[20%] font-pretendard-light text-text2;
+    @apply w-[20%] font-noto-serif-light font-light text-text2 tracking-[1.6px];
   }
   .header-title {
-    @apply w-[60%] border-x-[3px] border-secondary font-pretendard-medium text-heading_2_S py-6;
+    @apply w-[60%] border-x-[3px] font-noto-serif-medium border-secondary text-heading_2_S tracking-[0.2px] py-6;
   }
   .header-count {
-    @apply w-[20%] font-pretendard-light text-text2;
+    @apply w-[20%] font-noto-serif-light font-light text-text2 tracking-[1.6px];
   }
 }
 
@@ -329,9 +394,6 @@
   }
   .insight-header-title {
     @apply font-sabon text-heading_3;
-  }
-  .insight-border {
-    @apply lg:border-t-[1px] xl:border-t-[2px] 2xl:border-t-[3px] mt-[5rem] border-deepgray;
   }
   .insight-section {
     @apply w-full h-full flex flex-row items-center justify-between px-[7rem] py-[3.125rem] border-b-[3px] border-secondary_800 hover:bg-primary_bg focus:bg-primary_600;
@@ -375,7 +437,7 @@
     @apply w-full flex flex-col items-center bg-white px-[7rem] py-[8rem] text-center;
   }
   .newsletter-img-section {
-    @apply relative;
+    @apply w-full relative;
   }
   .newsletter-form-container {
     @apply w-full flex flex-col items-center bg-primary_800 text-center px-[7rem] py-[8rem];
@@ -399,16 +461,16 @@
     @apply flex flex-col items-start font-pretendard-medium text-text2 text-white gap-5;
   }
   .newsletter-form-input {
-    @apply w-full p-[1.875rem] font-pretendard-medium text-text2 text-secondary_400  rounded-md;
+    @apply w-full p-[1.875rem] font-pretendard-medium text-text2 text-secondary_400 rounded-md;
   }
   .newsletter-form-checkbox-section {
     @apply flex flex-row items-center gap-5 relative font-pretendard-medium text-text2 text-white;
   }
   .newsletter-form-checkbox {
-    @apply w-[1.875rem] h-[1.875rem] bg-secondary_400 rounded-xl appearance-none;
+    @apply w-[1.875rem] h-[1.875rem] bg-secondary_400 rounded-lg appearance-none;
   }
   .newsletter-form-check-icon {
-    @apply absolute -top-1 left-2 hidden peer-checked:block text-white;
+    @apply absolute -top-1 left-2 hidden peer-checked:block text-white pointer-events-none;
   }
   .newsletter-form-textarea {
     @apply w-full h-full p-6 rounded-md font-pretendard-medium text-heading_6 text-primary_800 overflow-auto resize-none;

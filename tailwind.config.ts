@@ -23,6 +23,9 @@ const config = {
       fontFamily: {
         sabon: ["Sabon"],
         "sabon-bold": ["Sabon-Bold"],
+        "sabon-italic": ["Sabon-Italic"],
+        "noto-serif-light": ["Noto-Serif-Light"],
+        "noto-serif-medium": ["Noto-Serif-medium"],
         pretendard: ["Pretendard"],
         "pretendard-thin": ["Pretendard-Thin"],
         "pretendard-light": ["Pretendard-Light"],
@@ -158,11 +161,12 @@ const config = {
             lineHeight: "19px",
             letterSpacing: "0px"
           }
-        ],
+        ]
       },
       colors: {
         primary: "#CBBD9A",
         primary_bg: "#F5F0E6",
+        primary_50: "#F5F3EF",
         primary_100: "#CFC7B1",
         primary_200: "#CFC6B1",
         primary_400: "#A69A7C",

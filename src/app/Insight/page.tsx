@@ -58,7 +58,7 @@ export default function Insight() {
           <TabsTrigger value="password">조회순</TabsTrigger>
         </TabsList>
       </div>
-      <div className="insight-border"></div>
+      <Border className="2xl:border-t-[3px] mt-[5rem] border-deepgray" />
       <TabsContent value="account">
         {dealing.map(
           ({ id, img, title, publicDate, viewsCount, description }, index) => (

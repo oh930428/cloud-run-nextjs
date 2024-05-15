@@ -11,6 +11,7 @@ import HeaderTitle from "@/components/header-title";
 
 export default function Newsletter() {
   const [clicked, setClicked] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -22,39 +23,22 @@ export default function Newsletter() {
           viewsCount={89}
           className={"bg-primary_800"}
         />
-        <Border className="w-full border-t-[5px] border-secondary my-4" />
-        <div className="newsletter-img-section">
-          {clicked ? (
-            <Image
-              src={"/images/newsletter.jpg"}
-              alt={"개발호재 지역 분석(용인 1부"}
-              width={1248}
-              height={4000}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "contain",
-                objectPosition: "center"
-              }}
-            />
-          ) : (
-            <>
-              <Image
-                src={"/images/newsletter_summary.jpg"}
-                alt={"개발호재 지역 분석(용인 1부"}
-                width={1248}
-                height={5000}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain",
-                  objectPosition: "center"
-                }}
-              />
-              <Border className="w-full border-t-[5px] border-secondary my-4" />
-            </>
-          )}
+        <Border className="w-full border-t-[5px] border-secondary mt-4 mb-[2.5rem]" />
+        <div
+          className={`newsletter-img-section ${clicked ? "h-[12000px]" : "h-[2200px]"}`}
+        >
+          <Image
+            src={"/images/newsletter.jpg"}
+            alt={"개발호재 지역 분석(용인 1부"}
+            priority
+            fill
+            objectFit={`${clicked ? "contain" : "cover"}`}
+            objectPosition="top"
+          />
         </div>
+        {!clicked && (
+          <Border className="w-full border-t-[2px] border-secondary mt-[3.125rem] mb-4" />
+        )}
 
         {!clicked && (
           <Button

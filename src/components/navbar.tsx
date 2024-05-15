@@ -29,8 +29,8 @@ export default function Navbar() {
       <div className="navbar-tab-container">
         <div className={`navbar-tab-section ${textColor}`}>
           <Link href={""}>WHAT</Link>
-          <Link href={""}>WHO</Link>
-          <Link href={""}>ASSET</Link>
+          <Link href={"/Who"}>WHO</Link>
+          <Link href={"/Asset"}>ASSET</Link>
           <Link href={"/Insight"}>INSIGHT</Link>
           <Link href={"/Newsletter"}>NEWSLETTER</Link>
         </div>

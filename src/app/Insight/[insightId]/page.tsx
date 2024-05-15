@@ -17,7 +17,7 @@ export default function InsightDetail() {
         viewsCount={89}
         className="bg-secondary"
       />
-      <Border className="w-full border-t-[5px] border-secondary my-4" />
+      <Border className="w-full border-t-[5px] border-secondary mt-4 mb-[2.5rem]" />
       <div className="insight-detail-img-section">
         <Image
           src={"/images/insight_detail.jpg"}
@@ -31,7 +31,7 @@ export default function InsightDetail() {
           }}
         />
       </div>
-      <Border className="w-full border-t-[5px] border-secondary my-4" />
+      <Border className="w-full border-t-[2px] border-secondary mt-[3.125rem] mb-4" />
       <div className="insight-detail-button-section">
         <Button
           varient={"contain"}
