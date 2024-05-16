@@ -111,9 +111,11 @@ export default function AssetDetail() {
       <div className="flex flex-col items-center gap-3 px-[7rem] mb-[6.25rem]">
         <div
           className={`w-full ${opened ? "bg-primary rounded-md transition-all" : "hover:bg-primary_bg rounded-md"} flex flex-col items-center shadow-[0_2px_4px_rgba(0,0,0,0.25)]`}
-          onClick={handleFileSectionOpen}
         >
-          <div className="w-full flex flex-row items-center justify-between  px-[4.625rem] rounded-md py-3">
+          <div
+            className="w-full flex flex-row items-center justify-between  px-[4.625rem] rounded-md py-3"
+            onClick={handleFileSectionOpen}
+          >
             <div
               className={`w-[4.625rem] h-[4.625rem] flex items-center justify-center rounded-full ${opened ? "bg-white" : "bg-primary_800"}`}
             >
