@@ -8,6 +8,7 @@ import Border from "@/components/border";
 export default function Asset() {
   const assets = [
     {
+      id: "1",
       img: "https://storage.googleapis.com/yds-btq-img-datum/deal-info/deal_complete/completed_deal_three.jpg",
       title: "인천 남동공단 물류센터",
       key1: "연수익률",
@@ -22,6 +23,7 @@ export default function Asset() {
       tag2: "물류센터"
     },
     {
+      id: "2",
       img: "https://storage.googleapis.com/yds-btq-img-datum/deal-info/deal_complete/completed_deal_three.jpg",
       title: "울산 전하동 KCC 근린상가시설",
       key1: "연수익률",
@@ -58,6 +60,7 @@ export default function Asset() {
         {assets.map(
           (
             {
+              id,
               img,
               title,
               key1,
@@ -77,7 +80,7 @@ export default function Asset() {
               key={index}
               className="w-full h-full flex flex-col items-center gap-5"
             >
-              <a className="relative w-full h-[25rem]" href="#">
+              <a className="relative w-full h-[25rem]" href={`/Asset/${id}`}>
                 <div className="w-full h-full absolute flex flex-row items-center justify-center transition duration-300 ease-in-out opacity-0 hover:opacity-80 z-20 bg-black text-primary">
                   <IoArrowForwardCircleOutline size={42} />
                 </div>
